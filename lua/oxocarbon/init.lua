@@ -310,13 +310,9 @@ vim.api.nvim_set_hl(0, "@tag.attribute", { fg = oxocarbon.base15, bg = oxocarbon
 vim.api.nvim_set_hl(0, "@tag.delimiter", { fg = oxocarbon.base15, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@reference", { fg = oxocarbon.base04, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimInternalError", { fg = oxocarbon.base00, bg = oxocarbon.base08 })
-vim.api.nvim_set_hl(0, "NormalFloat", { fg = oxocarbon.base05, bg = oxocarbon.blend })
-vim.api.nvim_set_hl(0, "FloatBorder", { fg = oxocarbon.blend, bg = oxocarbon.blend })
 vim.api.nvim_set_hl(0, "NormalNC", { fg = oxocarbon.base05, bg = oxocarbon.base00 })
 vim.api.nvim_set_hl(0, "TermCursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "TermCursorNC", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
-vim.api.nvim_set_hl(0, "StatusLine", { fg = oxocarbon.base04, bg = oxocarbon.base00 })
-vim.api.nvim_set_hl(0, "StatusLineNC", { fg = oxocarbon.base04, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "StatusReplace", { fg = oxocarbon.base00, bg = oxocarbon.base08 })
 vim.api.nvim_set_hl(0, "StatusInsert", { fg = oxocarbon.base00, bg = oxocarbon.base12 })
 vim.api.nvim_set_hl(0, "StatusVisual", { fg = oxocarbon.base00, bg = oxocarbon.base14 })
@@ -386,15 +382,23 @@ vim.api.nvim_set_hl(0, "NeogitBranch", { fg = oxocarbon.base10, bg = oxocarbon.n
 vim.api.nvim_set_hl(0, "NeogitRemote", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NeogitHunkHeader", { fg = oxocarbon.base04, bg = oxocarbon.base02 })
 vim.api.nvim_set_hl(0, "NeogitHunkHeaderHighlight", { fg = oxocarbon.base04, bg = oxocarbon.base03 })
+-- Windows
+vim.api.nvim_set_hl(0, "NormalFloat", { fg = oxocarbon.base05, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = oxocarbon.blend, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = oxocarbon.base03, bg = oxocarbon.none })
+-- StatusLine
+vim.api.nvim_set_hl(0, "StatusLine", { fg = oxocarbon.base03, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "StatusLineNC", { fg = oxocarbon.base03, bg = oxocarbon.none })
+vim.opt.statusline = '%{repeat("─",winwidth("."))}'
 --
 vim.api.nvim_set_hl(0, "HydraRed", { fg = oxocarbon.base12, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "HydraBlue", { fg = oxocarbon.base09, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "HydraAmaranth", { fg = oxocarbon.base10, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "HydraTeal", { fg = oxocarbon.base08, bg = oxocarbon.none })
+vim.api.nvim_set_hl(0, "alpha3", { fg = oxocarbon.base03, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "HydraHint", { fg = oxocarbon.none, bg = oxocarbon.blend })
 vim.api.nvim_set_hl(0, "alpha1", { fg = oxocarbon.base03, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "alpha2", { fg = oxocarbon.base04, bg = oxocarbon.none })
-vim.api.nvim_set_hl(0, "alpha3", { fg = oxocarbon.base03, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "CodeBlock", { fg = oxocarbon.none, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "BufferLineDiagnostic", { fg = oxocarbon.base10, bg = oxocarbon.none, bold = true })
 vim.api.nvim_set_hl(0, "BufferLineDiagnosticVisible", { fg = oxocarbon.base10, bg = oxocarbon.none, bold = true })
@@ -413,4 +417,3 @@ vim.api.nvim_set_hl(0, "VimwikiList", { link = "markdownListMarker" })
 vim.api.nvim_set_hl(0, "VimwikiLink", { link = "markdownUrl" })
 vim.api.nvim_set_hl(0, "VimwikiCode", { link = "markdownCode" })
 return { oxocarbon = oxocarbon }
-
