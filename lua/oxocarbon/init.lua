@@ -6,7 +6,7 @@ else
 end
 vim.g["colors_name"] = "oxocarbon"
 vim.o["termguicolors"] = true
-local base00 = "#161616"
+local base00 = "#1c1e1f"
 local base06 = "#ffffff"
 local base09 = "#78a9ff"
 local oxocarbon = (
