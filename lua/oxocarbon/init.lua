@@ -11,6 +11,7 @@ vim.o.termguicolors = true
 local base00 = "#1c1e1f"
 local base06 = "#ffffff"
 local base09 = "#78a9ff"
+local dark = "#161616"
 
 local oxocarbon = vim.o.background == "dark"
     and {
@@ -70,6 +71,10 @@ vim.g.terminal_color_12 = oxocarbon.base09
 vim.g.terminal_color_13 = oxocarbon.base15
 vim.g.terminal_color_14 = oxocarbon.base07
 vim.g.terminal_color_15 = oxocarbon.base06
+
+-- Winbar
+vim.api.nvim_set_hl(0, "WinBar", { fg = oxocarbon.base04, bg = dark })
+vim.api.nvim_set_hl(0, "WinBarNC", { fg = oxocarbon.base04, bg = dark })
 
 vim.api.nvim_set_hl(0, "ColorColumn", { fg = oxocarbon.none, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "Cursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
