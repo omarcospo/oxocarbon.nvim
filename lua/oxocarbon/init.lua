@@ -1,17 +1,18 @@
-local _local_1_ = require("oxocarbon.colorutils")
-local blend_hex = _local_1_["blend-hex"]
+local colorutils = require("oxocarbon.colorutils")
+local blend_hex = colorutils["blend-hex"]
+
 if vim.g.colors_name then
-  vim.cmd.hi("clear")
-else
+  vim.cmd("hi clear")
 end
-vim.g["colors_name"] = "oxocarbon"
-vim.o["termguicolors"] = true
+
+vim.g.colors_name = "oxocarbon"
+vim.o.termguicolors = true
+
 local base00 = "#1c1e1f"
 local base06 = "#ffffff"
 local base09 = "#78a9ff"
-local oxocarbon = (
-  (
-    (vim.o.background == "dark")
+
+local oxocarbon = vim.o.background == "dark"
     and {
       base00 = base00,
       base01 = blend_hex(base00, base06, 0.085),
@@ -32,7 +33,6 @@ local oxocarbon = (
       blend = "#131313",
       none = "NONE",
     }
-  )
   or {
     base00 = base06,
     base01 = blend_hex(base00, base06, 0.95),
@@ -53,25 +53,24 @@ local oxocarbon = (
     blend = "#FAFAFA",
     none = "NONE",
   }
-)
-do
-end
-(vim.g)["terminal_color_0"] = oxocarbon.base01
-vim.g["terminal_color_1"] = oxocarbon.base11
-vim.g["terminal_color_2"] = oxocarbon.base14
-vim.g["terminal_color_3"] = oxocarbon.base13
-vim.g["terminal_color_4"] = oxocarbon.base09
-vim.g["terminal_color_5"] = oxocarbon.base15
-vim.g["terminal_color_6"] = oxocarbon.base08
-vim.g["terminal_color_7"] = oxocarbon.base05
-vim.g["terminal_color_8"] = oxocarbon.base03
-vim.g["terminal_color_9"] = oxocarbon.base11
-vim.g["terminal_color_10"] = oxocarbon.base14
-vim.g["terminal_color_11"] = oxocarbon.base13
-vim.g["terminal_color_12"] = oxocarbon.base09
-vim.g["terminal_color_13"] = oxocarbon.base15
-vim.g["terminal_color_14"] = oxocarbon.base07
-vim.g["terminal_color_15"] = oxocarbon.base06
+
+vim.g.terminal_color_0 = oxocarbon.base01
+vim.g.terminal_color_1 = oxocarbon.base11
+vim.g.terminal_color_2 = oxocarbon.base14
+vim.g.terminal_color_3 = oxocarbon.base13
+vim.g.terminal_color_4 = oxocarbon.base09
+vim.g.terminal_color_5 = oxocarbon.base15
+vim.g.terminal_color_6 = oxocarbon.base08
+vim.g.terminal_color_7 = oxocarbon.base05
+vim.g.terminal_color_8 = oxocarbon.base03
+vim.g.terminal_color_9 = oxocarbon.base11
+vim.g.terminal_color_10 = oxocarbon.base14
+vim.g.terminal_color_11 = oxocarbon.base13
+vim.g.terminal_color_12 = oxocarbon.base09
+vim.g.terminal_color_13 = oxocarbon.base15
+vim.g.terminal_color_14 = oxocarbon.base07
+vim.g.terminal_color_15 = oxocarbon.base06
+
 vim.api.nvim_set_hl(0, "ColorColumn", { fg = oxocarbon.none, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "Cursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "CursorLine", { fg = oxocarbon.none, bg = oxocarbon.base01 })
@@ -82,6 +81,7 @@ vim.api.nvim_set_hl(0, "Error", { fg = oxocarbon.base10, bg = oxocarbon.base01 }
 vim.api.nvim_set_hl(0, "LineNr", { fg = oxocarbon.base03, bg = oxocarbon.base00 })
 vim.api.nvim_set_hl(0, "NonText", { fg = oxocarbon.base02, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "Normal", { fg = oxocarbon.base04, bg = oxocarbon.base00 })
+vim.api.nvim_set_hl(0, "NormalNC", { fg = oxocarbon.base05, bg = oxocarbon.base00 })
 vim.api.nvim_set_hl(0, "Pmenu", { fg = oxocarbon.base04, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "PmenuSbar", { fg = oxocarbon.base04, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "PmenuSel", { fg = oxocarbon.base08, bg = oxocarbon.base02 })
@@ -310,7 +310,6 @@ vim.api.nvim_set_hl(0, "@tag.attribute", { fg = oxocarbon.base15, bg = oxocarbon
 vim.api.nvim_set_hl(0, "@tag.delimiter", { fg = oxocarbon.base15, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "@reference", { fg = oxocarbon.base04, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "NvimInternalError", { fg = oxocarbon.base00, bg = oxocarbon.base08 })
-vim.api.nvim_set_hl(0, "NormalNC", { fg = oxocarbon.base05, bg = oxocarbon.base00 })
 vim.api.nvim_set_hl(0, "TermCursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "TermCursorNC", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "StatusReplace", { fg = oxocarbon.base00, bg = oxocarbon.base08 })
