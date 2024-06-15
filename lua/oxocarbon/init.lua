@@ -405,22 +405,27 @@ vim.api.nvim_set_hl(0, "VimwikiLink", { link = "markdownUrl" })
 vim.api.nvim_set_hl(0, "VimwikiCode", { link = "markdownCode" })
 vim.api.nvim_set_hl(0, "HighlightURL", { underline = true })
 
-vim.g.terminal_color_0 = oxocarbon.base00
-vim.g.terminal_color_1 = oxocarbon.base11
-vim.g.terminal_color_2 = oxocarbon.base14
-vim.g.terminal_color_3 = oxocarbon.base13
-vim.g.terminal_color_4 = oxocarbon.base09
-vim.g.terminal_color_5 = oxocarbon.base15
-vim.g.terminal_color_6 = oxocarbon.base08
-vim.g.terminal_color_7 = oxocarbon.base05
-vim.g.terminal_color_8 = oxocarbon.base03
-vim.g.terminal_color_9 = oxocarbon.base11
-vim.g.terminal_color_10 = oxocarbon.base14
-vim.g.terminal_color_11 = oxocarbon.base13
-vim.g.terminal_color_12 = oxocarbon.base09
-vim.g.terminal_color_13 = oxocarbon.base15
-vim.g.terminal_color_14 = oxocarbon.base07
-vim.g.terminal_color_15 = oxocarbon.base06
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.g.terminal_color_0 = oxocarbon.base00
+    vim.g.terminal_color_1 = oxocarbon.base11
+    vim.g.terminal_color_2 = oxocarbon.base14
+    vim.g.terminal_color_3 = oxocarbon.base13
+    vim.g.terminal_color_4 = oxocarbon.base09
+    vim.g.terminal_color_5 = oxocarbon.base15
+    vim.g.terminal_color_6 = oxocarbon.base08
+    vim.g.terminal_color_7 = oxocarbon.base05
+    vim.g.terminal_color_8 = oxocarbon.base03
+    vim.g.terminal_color_9 = oxocarbon.base11
+    vim.g.terminal_color_10 = oxocarbon.base14
+    vim.g.terminal_color_11 = oxocarbon.base13
+    vim.g.terminal_color_12 = oxocarbon.base09
+    vim.g.terminal_color_13 = oxocarbon.base15
+    vim.g.terminal_color_14 = oxocarbon.base07
+    vim.g.terminal_color_15 = oxocarbon.base06
+  end,
+})
 
 local function delete_url_effect()
   for _, match in ipairs(vim.fn.getmatches()) do
