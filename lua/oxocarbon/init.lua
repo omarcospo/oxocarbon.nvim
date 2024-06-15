@@ -6,7 +6,7 @@ if vim.g.colors_name then
 end
 
 vim.g.colors_name = "oxocarbon"
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 
 local base00 = "#1c1e1f"
 local base06 = "#ffffff"
