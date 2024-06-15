@@ -405,8 +405,8 @@ vim.api.nvim_set_hl(0, "VimwikiLink", { link = "markdownUrl" })
 vim.api.nvim_set_hl(0, "VimwikiCode", { link = "markdownCode" })
 vim.api.nvim_set_hl(0, "HighlightURL", { underline = true })
 
-vim.api.nvim_create_autocmd("TermOpen", {
-  pattern = "*",
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "toggleterm" },
   callback = function()
     vim.g.terminal_color_0 = oxocarbon.base00
     vim.g.terminal_color_1 = oxocarbon.base11
