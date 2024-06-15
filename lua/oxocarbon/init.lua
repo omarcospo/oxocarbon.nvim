@@ -449,4 +449,11 @@ vim.api.nvim_create_autocmd({ "VimEnter", "FileType", "BufEnter", "WinEnter" }, 
     set_url_effect()
   end,
 })
+
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 0
+vim.opt.statusline = ""
+vim.opt.showcmd = false
+vim.opt.ruler = false
+
 return { oxocarbon = oxocarbon }
