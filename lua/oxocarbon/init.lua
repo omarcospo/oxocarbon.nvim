@@ -6,7 +6,7 @@ if vim.g.colors_name then
 end
 
 vim.g.colors_name = "oxocarbon"
-vim.o.termguicolors = true
+vim.o.termguicolors = false
 
 local base00 = "#1c1e1f"
 local base06 = "#ffffff"
@@ -57,7 +57,6 @@ local oxocarbon = vim.o.background == "dark"
 -- Winbar
 vim.api.nvim_set_hl(0, "WinBar", { fg = oxocarbon.base04, bg = dark })
 vim.api.nvim_set_hl(0, "WinBarNC", { fg = oxocarbon.base04, bg = dark })
-
 vim.api.nvim_set_hl(0, "ColorColumn", { fg = oxocarbon.none, bg = oxocarbon.base01 })
 vim.api.nvim_set_hl(0, "Cursor", { fg = oxocarbon.base00, bg = oxocarbon.base04 })
 vim.api.nvim_set_hl(0, "CursorLine", { fg = oxocarbon.none, bg = oxocarbon.base01 })
