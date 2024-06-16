@@ -54,6 +54,8 @@ local oxocarbon = vim.o.background == "dark"
     blend = "#FAFAFA",
     none = "NONE",
   }
+-- Notify
+vim.api.nvim_set_hl(0, "NotifyBackground", { fg = oxocarbon.base04, bg = oxocarbon.none })
 -- Winbar
 vim.api.nvim_set_hl(0, "WinBar", { fg = oxocarbon.base04, bg = dark })
 vim.api.nvim_set_hl(0, "WinBarNC", { fg = oxocarbon.base04, bg = dark })
@@ -375,7 +377,6 @@ vim.api.nvim_set_hl(0, "WinSeparator", { fg = oxocarbon.base03, bg = oxocarbon.n
 -- StatusLine
 vim.api.nvim_set_hl(0, "StatusLine", { fg = oxocarbon.base03, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "StatusLineNC", { fg = oxocarbon.base03, bg = oxocarbon.none })
-vim.opt.statusline = '%{repeat("─",winwidth("."))}'
 --
 vim.api.nvim_set_hl(0, "HydraRed", { fg = oxocarbon.base12, bg = oxocarbon.none })
 vim.api.nvim_set_hl(0, "HydraBlue", { fg = oxocarbon.base09, bg = oxocarbon.none })
